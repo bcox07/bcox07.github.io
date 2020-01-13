@@ -1,7 +1,9 @@
+$PRIMARY: #953513;
 
 body {
-    overflow: hidden;
+    overflow: auto;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #DEDEDE;
 }
 
 h1 {
@@ -9,22 +11,36 @@ h1 {
 }
 
 a {
-    color: white;
+    color: #DEDEDE;
     text-decoration: none;
 }
 
 @keyframes nav-hover {
     from {
-        background-color: #00183F;
-        color: white;
+        padding-top: 27px;
+        background-color: $PRIMARY;
+        color: #DEDEDE;
     }
     to {
-        background-color: white;
-        color: #00183F;
+        padding-top: 40px;
+        background-color: #DEDEDE;
+        color: $PRIMARY;
+    }
+}
+
+@keyframes contact-hover {
+    from {
+        font-size: 15px;
+        margin-top: 0;
+    }
+    to {
+        font-size: 25px;
+        margin-top: -3px;
     }
 }
 .navbar {
-    background-color: #00183F;
+    z-index: 99;
+    background-color: #DEDEDE;
     height: 70px;
     width: 100%;
     top: 0;
@@ -32,66 +48,104 @@ a {
     position: absolute;
     overflow: hidden;
     &__container {
-        color: white;
+        z-index: 99;
+        color: #DEDEDE;
         width: 80%;
         height: 100%;
         margin-left: 10%;
         margin-top: -5px;
     }
     &__title {
+        color: $PRIMARY;
         margin: 25px 60px 0 0;
         float: left;
     }
     &__button {
+        color: $PRIMARY;
+        background-size: 200% 100%;
+        background-image: linear-gradient(to right, #DEDEDE 50%, $PRIMARY 50%);
+        -webkit-transition: background-position 0.5s;
+        -moz-transition: background-position 0.5s;
+        transition: background-position 0.5s, color 0.3s;
+        display: inline-block;
         margin: 0 50px 0 0;
         padding-top: 27px;
         padding-left: 10px;
         padding-right: 10px;
-        float: left;
         height: 100%;
         vertical-align: middle;
+        font-size: 24px;
+        font-weight: 600;
         &:hover {
-            animation-name: nav-hover;
-            animation-duration: 2s;
-            animation-fill-mode: forwards;
+            background-position: -100% 0;
+            color: #DEDEDE;
         }
     }
 }
+
 
 #contact {
     margin-right: 0;
 }
 
-.about {
-    width: 100%;
-    height: 400px;
-    padding-top: 300px;
+.background {
+    background-color: $PRIMARY;
+    overflow: auto;
+    position: relative;
+    z-index: 0;
+    margin-left: -0.43%;
+    width: 100vw;
+    height: 100%;
     text-align: center;
+}
+
+.about {
     &__title {
-        color: #00183F;
+        padding-top: 200px;
+        color: #DEDEDE;
         font-size: 45px;
     }
     &__info {
+        color: #DEDEDE;
         font-size: 20px;
-        width: 70%;
-        margin-left: 15%;
+        width: 60%;
+        margin-left: 20%;
     }
 }
 
+
 .footer {
     width: 100%;
-    height: 50px;
-    background-color: #00183F;
+    height: 100px;
+    background-color: #DEDEDE;
+    
     bottom: 0;
-    font-size: 20px;
+    font-size: 15px;
     left: 0;
     position: absolute;
     text-align: center;
     &__container {
-        margin-top: 15px;
+        margin-top: 45px;
     }
-    &__center__link {
-        margin-left: 50px;
-        margin-right: 50px;
+    &__button{
+        position: absolute;
+        color: $PRIMARY;
+        font-weight: 700;
+        font-size: 17px;
+        &__left{
+            @extend .footer__button;
+            left: 40%;
+
+        }
+        &__center {
+            @extend .footer__button;
+            position: relative;
+            text-align: center;
+        }
+        &__right {
+            @extend .footer__button;
+            right: 40%;
+        }
     }
+    
 }
