@@ -2,6 +2,8 @@ body {
   overflow: auto;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #A53D3D;
+  overflow-x: hidden;
+  text-align: center;
 }
 
 h1 {
@@ -96,7 +98,7 @@ li {
 .about__container {
   box-shadow: inset 5px 5px 10px #000;
   background-color: #DEDEDE;
-  margin-left: -1.2vw;
+  margin-left: -0.95vw;
   position: relative;
   width: 100vw;
   height: 750px;
@@ -106,12 +108,12 @@ li {
 .about__title {
   padding-top: 70px;
   font-size: 45px;
-  color: #A5A53D;
+  color: #A5973D;
 }
 .about__info {
   color: #DEDEDE;
   background-color: #A53D3D;
-  border-color: #A5A53D;
+  border-color: #A5973D;
   border-style: solid;
   border-width: 5px;
   border-radius: 30px;
@@ -123,10 +125,10 @@ li {
 }
 
 .portfolio, .portfolio__container {
-  background-color: #A5A53D;
+  background-color: #A5973D;
 }
 .portfolio__container {
-  margin-left: -1.2vw;
+  margin-left: -0.95vw;
   position: relative;
   width: 100vw;
   height: 1200px;
@@ -140,12 +142,12 @@ li {
   font-size: 45px;
 }
 .portfolio__object {
-  width: 22%;
+  width: 24%;
   height: 400px;
   background-color: #DEDEDE;
-  margin-left: 1%;
-  margin-right: 1%;
-  border-radius: 30px;
+  margin-left: 0.85%;
+  margin-right: 0.85%;
+  border-radius: 10px;
   border-style: solid;
   border-color: #A53D3D;
   border-width: 5px;
@@ -153,9 +155,45 @@ li {
 }
 .portfolio__object__container {
   margin-top: 60px;
-  margin-left: 5%;
+  margin-left: 1%;
   margin-right: 5%;
   display: -webkit-box;
+  padding: 0;
+}
+.portfolio__object__title {
+  color: #A53D3D;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+}
+.portfolio__object__image {
+  width: 98%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  position: relative;
+  float: bottom;
+}
+.portfolio__object__image__container {
+  width: 100%;
+  height: 40%;
+  margin-top: 5px;
+}
+.portfolio__object__button {
+  color: #DEDEDE;
+  background-color: #A53D3D;
+  font-size: 15px;
+  font-weight: 600;
+  border-style: none;
+  border-radius: 5px;
+  width: 140px;
+  height: 40px;
+  cursor: pointer;
+}
+.portfolio__object__info {
+  height: 28%;
+  padding: 0 5% 0 5%;
+  top: 200px;
 }
 
 .footer {
