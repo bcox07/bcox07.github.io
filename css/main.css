@@ -1,9 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow: auto;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #A53D3D;
   overflow-x: hidden;
   text-align: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
@@ -20,28 +28,10 @@ li {
   height: 37.6px;
 }
 
-@keyframes nav-hover {
-  from {
-    padding-top: 27px;
-    background-color: #A53D3D;
-    color: #DEDEDE;
-  }
-  to {
-    padding-top: 40px;
-    background-color: #DEDEDE;
-    color: #A53D3D;
-  }
+p {
+  margin: 0;
 }
-@keyframes contact-hover {
-  from {
-    font-size: 15px;
-    margin-top: 0;
-  }
-  to {
-    font-size: 25px;
-    margin-top: -3px;
-  }
-}
+
 .nav__container {
   z-index: 99;
   color: #000;
@@ -96,9 +86,9 @@ li {
   color: #A53D3D;
 }
 .about__container {
-  box-shadow: inset 5px 5px 10px #000;
+  box-shadow: inset 0 5px 10px #000;
   background-color: #DEDEDE;
-  margin-left: -0.95vw;
+  margin-left: -0.4vw;
   position: relative;
   width: 100vw;
   height: 750px;
@@ -128,7 +118,7 @@ li {
   background-color: #A5973D;
 }
 .portfolio__container {
-  margin-left: -0.95vw;
+  margin-left: -0.4vw;
   position: relative;
   width: 100vw;
   height: 1200px;
@@ -167,17 +157,25 @@ li {
   margin: 20px 0 10px 0;
 }
 .portfolio__object__image {
-  width: 98%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;
+  object-fit: contain;
   border-radius: 2px;
   position: relative;
-  float: bottom;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+.portfolio__object__image:hover {
+  transform: scale(1.5);
 }
 .portfolio__object__image__container {
-  width: 100%;
+  width: 98%;
   height: 40%;
   margin-top: 5px;
+  margin-left: 5px;
+  text-align: center;
+  overflow: hidden;
+  display: block;
 }
 .portfolio__object__button {
   color: #DEDEDE;
@@ -192,26 +190,28 @@ li {
 }
 .portfolio__object__info {
   height: 28%;
+  overflow: hidden;
   padding: 0 5% 0 5%;
   top: 200px;
 }
 
 .footer {
-  width: 100%;
+  width: 100vw;
   height: 100px;
-  background-color: #DEDEDE;
-  bottom: 0;
+  background-color: #202020;
+  bottom: -0.6vh;
   font-size: 15px;
-  left: 0;
+  left: -0.4vw;
   position: relative;
   text-align: center;
 }
 .footer__container {
-  margin-top: 45px;
+  margin-top: -7px;
+  padding-top: 43px;
 }
 .footer__button, .footer__button__right, .footer__button__center, .footer__button__left {
   position: absolute;
-  color: #A53D3D;
+  color: #DEDEDE;
   font-weight: 700;
   font-size: 17px;
 }
