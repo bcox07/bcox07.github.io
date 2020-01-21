@@ -24,7 +24,7 @@ h1 {
 }
 
 a {
-    color: #DEDEDE;
+    color: #D2D2D2;
     text-decoration: none;
 }
 
@@ -50,10 +50,10 @@ p {
         text-align: left;
     }
     &__button {
-        color: #DEDEDE;
+        color: #D2D2D2;
         width: 205px;
         background-size: 200% 100%;
-        background-image: linear-gradient(to right, $PRIMARY 50%, #DEDEDE 50%);
+        background-image: linear-gradient(to right, $PRIMARY 50%, #D2D2D2 50%);
         -webkit-transition: background-position 0.5s;
         -moz-transition: background-position 0.5s;
         transition: background-position 0.5s, color 0.3s;
@@ -74,7 +74,7 @@ p {
         }
     }
     &__title {
-        color: #DEDEDE;
+        color: #D2D2D2;
         font-size: 70px;
         font-weight: 600;
         padding: 1% 0.5% 1% 0.5%;
@@ -112,11 +112,11 @@ p {
         @extend .about;
         padding-top: 70px;
         font-size: 45px;
-        color: #DEDEDE;
+        color: #D2D2D2;
         text-shadow: 5px 5px 10px #000;
     }
     &__info {
-        color: #DEDEDE;
+        color: #D2D2D2;
         background-color: $PRIMARY;
         border-color: #A5973D;
         opacity: 0.9;
@@ -146,13 +146,13 @@ p {
         list-style-type: none;
     }
     &__title {
-        color: #DEDEDE;
+        color: #D2D2D2;
         font-size: 45px;
     }
     &__object {
         width: 24%;
         height: 400px;
-        background-color: #DEDEDE;
+        background-color: #D2D2D2;
         margin-left: 0.85%;
         margin-right: 0.85%;
         border-radius: 10px;
@@ -196,7 +196,7 @@ p {
             }
         }
         &__button {
-            color: #DEDEDE;
+            color: #D2D2D2;
             background-color: $PRIMARY;
             font-size: 15px;
             font-weight: 600;
@@ -230,7 +230,7 @@ p {
     }
     &__button{
         position: absolute;
-        color: #DEDEDE;
+        color: #D2D2D2;
         font-weight: 700;
         font-size: 17px;
         &__left{
