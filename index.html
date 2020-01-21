@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="nav__container">
@@ -22,47 +23,54 @@
         <div class="portfolio__container" id="portfolio">
             <h1 class="portfolio__title">Portfolio</h1>
             <ul class="portfolio__object__container">
-                <li class="portfolio__object">
-                    <div class="portfolio__object__image__container"></div>
-                    <div class="portfolio__object__title">Theseus</div>
-                    <div class="portfolio__object__info">
-                        <P>Theseus is a Survival/Puzzle game based on the Greek Myth know as <em>Theseus and the Minotaur</em>.</em> It was designed using the Unity Game Engine paired with the C# programming language.</P>
+                <li class="portfolio__card">
+                    <div class="portfolio__object">
+                        <div class="portfolio__object__image__container"></div>
+                        <div class="portfolio__object__title">Theseus</div>
+                        <div class="portfolio__object__info">
+                            <P>Theseus is a Survival/Puzzle game based on the Greek Myth know as <em>Theseus and the Minotaur</em>.</em> It was designed using the Unity Game Engine paired with the C# programming language.</P>
+                        </div>
+                        <button type="button" class="portfolio__object__button" onclick="window.open('https://github.com/GabePetkewich/Mino-Game', '_blank');">View on GitHub</a></button>
                     </div>
-                    <button type="button" class="portfolio__object__button"><a href="https://github.com/GabePetkewich/Mino-Game">View on GitHub</a></button>
                 </li>
-                <li class="portfolio__object">
-                    <div class="portfolio__object__image__container" >
-                        <img src="images/updog.png" class="portfolio__object__image"> 
-                        <img src="images/osmoe.png" class="portfolio__object__image">  
+                <li class="portfolio__card">
+                    <div class="portfolio__object">
+                        <div class="portfolio__object__image__container" >
+                            <img src="images/updog.png" class="portfolio__object__image"> 
+                        </div>
+                        <div class="portfolio__object__title">Updog</div>
+                        <div class="portfolio__object__info">
+                            <p>Updog is a community driven music web application where the users create and add songs with the idea of collaboration. This is created using Sass and Pug for the front-end, Node.js with REST API for the back-end, and <em>PostgreSQL</em> for the database.</p>
+                        </div>
+                        <button type="button" class="portfolio__object__button" onclick="window.open('https://gitlab.com/hadley31/updog', '_blank');">View on GitLab</a></button>
                     </div>
-                    <div class="portfolio__object__title">Updog</div>
-                    <div class="portfolio__object__info">
-                        <p>Updog is a community driven music web application where the users create and add songs with the idea of collaboration. This is created using Sass and Pug for the front-end, Node.js with REST API for the back-end, and <em>PostgreSQL</em> for the database.</p>
-                    </div>
-                    <button type="button" class="portfolio__object__button"><a href="https://gitlab.com/hadley31/updog">View on GitLab</a></button>
                 </li>
-                <li class="portfolio__object">
-                    <div class="portfolio__object__image__container" >
-                        <img src="images/osmoe.png" class="portfolio__object__image">   
+                <li class="portfolio__card">
+                    <div class="portfolio__object">
+                        <div class="portfolio__object__image__container" >
+                            <img src="images/osmoe.png" class="portfolio__object__image">   
+                        </div>
+                        <div class="portfolio__object__title">Osmoe Sam</div>
+                        <div class="portfolio__object__info">
+                            <p>Osmoe Sam is a motivational web application that provides stats for the user's pet to keep the user motivated. This is created using Sass and Pug for the front-end, Node.js for the back-end, and PostgreSQL for the database. </p>
+                        </div>
+                        <button type="button" class="portfolio__object__button" onclick="window.open('https://gitlab.com/crspradlin/hci-final-project', '_blank');" target="_blank">View on GitLab</button>
                     </div>
-                    <div class="portfolio__object__title">Osmoe Sam</div>
-                    <div class="portfolio__object__info">
-                        <p>Updog is a community driven music web application where the users create and add songs with the idea of collaboration. This is created using Sass and Pug for the front-end, Node.js with REST API for the back-end, and <em>PostgreSQL</em> for the database.</p>
-                    </div>
-                    <button type="button" class="portfolio__object__button"><a href="https://gitlab.com/crspradlin/hci-final-project">View on GitLab</a></button>
                 </li>
-                <li class="portfolio__object">
-                    <div class="portfolio__object__image__container">
-                        <img src="images/emmy.png" class="portfolio__object__image">
-                        
+                <li class="portfolio__card">
+                    <div class="portfolio__object">
+                        <div class="portfolio__object__image__container">
+                            <img src="images/emmy.png" class="portfolio__object__image">
+                            
+                        </div>
+                        <div class="portfolio__object__title">
+                            Student Emmy
+                        </div>
+                        <div class="portfolio__object__info">
+                            <p>I was recently awarded a Student Emmy for my work in <em>Sports, Live Events - Georgia Southern Baseball</em>.</p>
+                        </div>
+                        <button type="button" class="portfolio__object__button" onclick="window.open('https://news.georgiasouthern.edu/2019/06/21/georgia-southern-university-wins-2-professional-4-student-emmy-awards/?utm_campaign=EmmyAwards&utm_source=linkedin&utm_medium=Facebook&utm_content=1561497960', '_blank');">View Article</a></button>
                     </div>
-                    <div class="portfolio__object__title">
-                        Student Emmy
-                    </div>
-                    <div class="portfolio__object__info">
-                        <p>I was recently awarded a Student Emmy for my work in <em>Sports, Live Events - Georgia Southern Baseball</em>.</p>
-                    </div>
-                    <button type="button" class="portfolio__object__button" onclick="window.location.href = 'https://news.georgiasouthern.edu/2019/06/21/georgia-southern-university-wins-2-professional-4-student-emmy-awards/?utm_campaign=EmmyAwards&utm_source=linkedin&utm_medium=Facebook&utm_content=1561497960'">View Article</a></button>
                 </li>
             </ul>
         </div>
