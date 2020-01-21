@@ -19,7 +19,7 @@ h1 {
 }
 
 a {
-  color: #DEDEDE;
+  color: #D2D2D2;
   text-decoration: none;
 }
 
@@ -43,10 +43,10 @@ p {
   text-align: left;
 }
 .nav__button {
-  color: #DEDEDE;
+  color: #D2D2D2;
   width: 205px;
   background-size: 200% 100%;
-  background-image: linear-gradient(to right, #A53D3D 50%, #DEDEDE 50%);
+  background-image: linear-gradient(to right, #A53D3D 50%, #D2D2D2 50%);
   -webkit-transition: background-position 0.5s;
   -moz-transition: background-position 0.5s;
   transition: background-position 0.5s, color 0.3s;
@@ -67,7 +67,7 @@ p {
   padding-left: 4px;
 }
 .nav__title {
-  color: #DEDEDE;
+  color: #D2D2D2;
   font-size: 70px;
   font-weight: 600;
   padding: 1% 0.5% 1% 0.5%;
@@ -102,11 +102,11 @@ p {
 .about__title {
   padding-top: 70px;
   font-size: 45px;
-  color: #DEDEDE;
+  color: #D2D2D2;
   text-shadow: 5px 5px 10px #000;
 }
 .about__info {
-  color: #DEDEDE;
+  color: #D2D2D2;
   background-color: #A53D3D;
   border-color: #A5973D;
   opacity: 0.9;
@@ -135,13 +135,13 @@ p {
   list-style-type: none;
 }
 .portfolio__title {
-  color: #DEDEDE;
+  color: #D2D2D2;
   font-size: 45px;
 }
 .portfolio__object {
   width: 24%;
   height: 400px;
-  background-color: #DEDEDE;
+  background-color: #D2D2D2;
   margin-left: 0.85%;
   margin-right: 0.85%;
   border-radius: 10px;
@@ -185,7 +185,7 @@ p {
   display: block;
 }
 .portfolio__object__button {
-  color: #DEDEDE;
+  color: #D2D2D2;
   background-color: #A53D3D;
   font-size: 15px;
   font-weight: 600;
@@ -218,7 +218,7 @@ p {
 }
 .footer__button, .footer__button__right, .footer__button__center, .footer__button__left {
   position: absolute;
-  color: #DEDEDE;
+  color: #D2D2D2;
   font-weight: 700;
   font-size: 17px;
 }
