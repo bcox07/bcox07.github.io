@@ -60,7 +60,7 @@ p {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .nav__title {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   .portfolio__card {
@@ -79,6 +79,10 @@ p {
 /* Large devices (laptops/desktops, 992px and up) */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .nav__title {
+    font-size: 70px;
+  }
+
   .portfolio__card {
     width: 25%;
   }
@@ -161,14 +165,14 @@ p {
   padding-top: 70px;
   font-size: 45px;
   color: #D2D2D2;
-  text-shadow: 5px 5px 10px #000;
+  text-shadow: 3px 3px 5px #000;
 }
 .about__info {
   height: 400px;
   box-sizing: border-box;
   color: #D2D2D2;
   background-color: #A53D3D;
-  border-color: #A5973D;
+  border-color: #6494AA;
   opacity: 0.9;
   border-style: solid;
   border-width: 5px;
@@ -179,7 +183,7 @@ p {
 }
 
 .portfolio, .portfolio__container {
-  background-color: #A5973D;
+  background-color: #6494AA;
 }
 .portfolio__container {
   position: relative;
@@ -192,6 +196,7 @@ p {
 .portfolio__title {
   color: #D2D2D2;
   font-size: 45px;
+  text-shadow: 3px 3px 5px #000;
 }
 .portfolio__card {
   height: 420px;
@@ -202,7 +207,7 @@ p {
   background-color: #D2D2D2;
   box-sizing: border-box;
   margin-left: 2.5%;
-  border-radius: 10px;
+  border-radius: 8px;
   border-style: solid;
   border-color: #A53D3D;
   border-width: 5px;
@@ -246,13 +251,14 @@ p {
 }
 .portfolio__object__button {
   color: #D2D2D2;
-  background-color: #A53D3D;
+  width: 140px;
+  height: 40px;
+  background-color: #BF975E;
   font-size: 15px;
   font-weight: 600;
   border-style: none;
   border-radius: 5px;
-  width: 140px;
-  height: 40px;
+  margin-top: 10px;
   cursor: pointer;
 }
 .portfolio__object__info {

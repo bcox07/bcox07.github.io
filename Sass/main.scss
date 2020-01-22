@@ -1,5 +1,6 @@
 $PRIMARY: #A53D3D;
-$SECONDARY: #A5973D;
+$SECONDARY: #BF975E;
+$TERTIARY: #6494AA;
 
 
 html {
@@ -71,7 +72,7 @@ p {
 @media only screen and (min-width: 600px) {
     .nav {
         &__title {
-            font-size: 70px;
+            font-size: 60px;
         }
     }
     .portfolio {
@@ -98,6 +99,11 @@ p {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .nav {
+        &__title {
+            font-size: 70px;
+        }
+    }
     .portfolio {
         &__card {
             width: 25%;
@@ -189,14 +195,14 @@ p {
         padding-top: 70px;
         font-size: 45px;
         color: #D2D2D2;
-        text-shadow: 5px 5px 10px #000;
+        text-shadow: 3px 3px 5px #000;
     }
     &__info {
         height: 400px;
         box-sizing: border-box;
         color: #D2D2D2;
         background-color: $PRIMARY;
-        border-color: #A5973D;
+        border-color: $TERTIARY;
         opacity: 0.9;
         border-style: solid;
         border-width: 5px;
@@ -208,13 +214,11 @@ p {
 }
 
 .portfolio {
-    background-color: #A5973D;
+    background-color: $TERTIARY;
     &__container {
         @extend .portfolio;
-        //margin-left: -0.4vw;
         position: relative;
         width: 100vw;
-        //height: 1200px;
         box-shadow: 0 -5px 10px #000;
         text-align: center;
         padding-top: 50px;
@@ -223,6 +227,7 @@ p {
     &__title {
         color: #D2D2D2;
         font-size: 45px;
+        text-shadow: 3px 3px 5px #000;
     }
     &__card {
         height: 420px;
@@ -234,7 +239,7 @@ p {
         box-sizing: border-box;
         margin-left: 2.5%;
         //margin-right: 0.85%;
-        border-radius: 10px;
+        border-radius: 8px;
         border-style: solid;
         border-color: $PRIMARY;
         border-width: 5px;
@@ -278,13 +283,14 @@ p {
         }
         &__button {
             color: #D2D2D2;
-            background-color: $PRIMARY;
+            width: 140px;
+            height: 40px;
+            background-color: $SECONDARY;
             font-size: 15px;
             font-weight: 600;
             border-style: none;
             border-radius: 5px;
-            width: 140px;
-            height: 40px;
+            margin-top: 10px;
             cursor: pointer;
         }
         &__info {
