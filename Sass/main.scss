@@ -40,12 +40,76 @@ p {
     margin: 0;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .nav {
+        &__container {
+            width: 500px;
+        }
+    }
+    .portfolio {
+        &__card {
+            width: 100%;
+        }
+        &__container {
+            height: 2000px;
+        }
+    }
+    .about {
+        &__info {
+            width: 90%;
+            margin-left: 5%;
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .portfolio {
+        &__card {
+            width: 50%;
+        }
+        &__container {
+            height: 1150px;
+        }
+    }
+    .about {
+        &__info {
+            width: 80%;
+            margin-left: 10%;
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+//@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+//@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .portfolio {
+        &__card {
+            width: 25%;
+        }
+        &__container {
+            height: 750px;
+        }
+    }
+    .about {
+        &__info {
+            width: 60%;
+            margin-left: 20%;
+        }
+    }
+}
 
 .nav {
     &__container {
         z-index: 99;
         color: #000;
-        width: 600px;
+        //width: 600px;
         height: 500px;
         left: 5%;
         top: 30%;
@@ -120,7 +184,6 @@ p {
         text-shadow: 5px 5px 10px #000;
     }
     &__info {
-        width: 60%;
         height: 400px;
         box-sizing: border-box;
         color: #D2D2D2;
@@ -131,8 +194,6 @@ p {
         border-width: 5px;
         border-radius: 30px;
         font-size: 26px;
-        
-        margin-left: 20%;
         padding: 15px 15px 15px 15px;
         box-shadow: 5px 5px 5px #000;
     }
@@ -145,7 +206,7 @@ p {
         //margin-left: -0.4vw;
         position: relative;
         width: 100vw;
-        height: 1200px;
+        //height: 1200px;
         box-shadow: 0 -5px 10px #000;
         text-align: center;
         padding-top: 50px;
@@ -156,8 +217,7 @@ p {
         font-size: 45px;
     }
     &__card {
-        width: 25%;
-
+        height: 420px;
     }
     &__object {
         width: 95%;
@@ -176,7 +236,8 @@ p {
             box-sizing: border-box;
             margin-top: 60px;
             margin-left: 1%;
-            display: -webkit-box;
+            display: flex;
+            flex-wrap: wrap;
             padding: 0;
         }
         &__title {
