@@ -64,6 +64,39 @@ p {
         &__info {
             width: 90%;
             margin-left: 5%;
+            padding: 5%;
+        }
+        &__container {
+            //background-position: left;
+        }
+    }
+    .footer {
+        height: 200px;
+        &__container {
+            font-size: 20px;
+        }
+        &__button {
+            &__left{
+                box-sizing: border-box;
+                text-align: center;
+                width: 100%;
+                height: 33.3%;
+                padding-top: 22px;
+            }
+            &__center {
+                box-sizing: border-box;
+                text-align: center;
+                width: 100%;
+                height: 33.3%;
+                padding-top: 22px;
+            }
+            &__right {
+                box-sizing: border-box;
+                text-align: center;
+                width: 100%;
+                height: 33.3%;
+                padding-top: 22px;
+            }
         }
     }
 }
@@ -87,6 +120,29 @@ p {
         &__info {
             width: 80%;
             margin-left: 10%;
+        }
+    }
+    .footer {
+        height: 100px;
+        &__container {
+            padding-top: 43px;
+        }
+        &__button {
+            &__left{
+                box-sizing: border-box;
+                text-align: right;
+                width: 40%;
+            }
+            &__center {
+                box-sizing: border-box;
+                text-align: center;
+                width: 20%;
+            }
+            &__right {
+                box-sizing: border-box;
+                text-align: left;
+                width: 40%;
+            }
         }
     }
 }
@@ -116,8 +172,12 @@ p {
         &__info {
             width: 60%;
             margin-left: 20%;
+            padding: 15px;
         }
-    }
+        &__container {
+            background-position: center;
+        }
+    }   
 }
 
 .nav {
@@ -184,7 +244,6 @@ p {
         box-shadow: inset 0 5px 10px #000;
         background-image: url("../images/emmy2.png");
         background-repeat: no-repeat;
-        background-position: center;
         background-size: cover;
         background-attachment: fixed;
         position: relative;
@@ -208,8 +267,20 @@ p {
         border-width: 5px;
         border-radius: 30px;
         font-size: 26px;
-        padding: 15px 15px 15px 15px;
         box-shadow: 5px 5px 5px #000;
+    }
+    &__resume {
+        height: 50px;
+        width: 200px;
+        background-color: $TERTIARY;
+        color: #D2D2D2;
+        font-size: 26px;
+        font-weight: 600;
+        border-style: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        box-shadow: 5px 5px 5px #000;
+        cursor: pointer;
     }
 }
 
@@ -230,15 +301,14 @@ p {
         text-shadow: 3px 3px 5px #000;
     }
     &__card {
-        height: 420px;
+        height: 430px;
     }
     &__object {
         width: 95%;
-        height: 400px;
+        height: 96%;
         background-color: #D2D2D2;
         box-sizing: border-box;
         margin-left: 2.5%;
-        //margin-right: 0.85%;
         border-radius: 8px;
         border-style: solid;
         border-color: $PRIMARY;
@@ -270,7 +340,6 @@ p {
             &:hover {
                 transform: scale(1.5);
             }
-                
             &__container {
                 width: 98%;
                 height: 40%;
@@ -299,41 +368,28 @@ p {
             padding: 0 5% 0 5%;
             top: 200px;
         }
-        
     }
 }
 .footer {
     width: 100%;
-    height: 100px;
     box-sizing: border-box;
     background-color: #202020;
     bottom: -0.8vh;
-    font-size: 15px;
     position: relative;
     text-align: center;
     &__container {
+        height: 100%;
         margin-top: -7px;
-        padding-top: 43px;
+        font-weight: 700;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
     }
-    &__button{
+    &__button {
         position: absolute;
         color: #D2D2D2;
         font-weight: 700;
         font-size: 17px;
-        &__left{
-            @extend .footer__button;
-            left: 40%;
-
-        }
-        &__center {
-            @extend .footer__button;
-            position: relative;
-            text-align: center;
-        }
-        &__right {
-            @extend .footer__button;
-            right: 40%;
-        }
+        
     }
-    
 }
