@@ -48,9 +48,6 @@ p {
   .portfolio__card {
     width: 100%;
   }
-  .portfolio__container {
-    height: 2000px;
-  }
 
   .about__info {
     width: 90%;
@@ -95,9 +92,6 @@ p {
   .portfolio__card {
     width: 50%;
   }
-  .portfolio__container {
-    height: 1150px;
-  }
 
   .about__info {
     width: 80%;
@@ -135,9 +129,6 @@ p {
 
   .portfolio__card {
     width: 25%;
-  }
-  .portfolio__container {
-    height: 750px;
   }
 
   .about__info {
@@ -207,7 +198,6 @@ p {
 }
 .about__container {
   width: 100%;
-  height: 750px;
   margin-top: 100vh;
   text-align: center;
   box-sizing: border-box;
@@ -245,7 +235,7 @@ p {
   font-weight: 600;
   border-style: none;
   border-radius: 5px;
-  margin-top: 40px;
+  margin: 40px 0 90px 0;
   box-shadow: 5px 5px 5px #000;
   cursor: pointer;
 }
@@ -258,7 +248,7 @@ p {
   width: 100vw;
   box-shadow: 0 -5px 10px #000;
   text-align: center;
-  padding-top: 50px;
+  padding: 50px 0 50px 0;
   list-style-type: none;
 }
 .portfolio__title {
@@ -284,8 +274,7 @@ p {
 .portfolio__object__container {
   width: 98%;
   box-sizing: border-box;
-  margin-top: 60px;
-  margin-left: 1%;
+  margin: 60px 0 100px 1%;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
