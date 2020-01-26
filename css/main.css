@@ -57,6 +57,7 @@ p {
     margin-left: 5%;
     padding: 5%;
   }
+
   .footer {
     height: 200px;
   }
@@ -101,6 +102,7 @@ p {
   .about__info {
     width: 80%;
     margin-left: 10%;
+    padding: 60px 15px 60px 15px;
   }
 
   .footer {
@@ -125,8 +127,6 @@ p {
     width: 40%;
   }
 }
-/* Medium devices (landscape tablets, 768px and up) */
-/* Large devices (laptops/desktops, 992px and up) */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .nav__title {
@@ -143,12 +143,16 @@ p {
   .about__info {
     width: 60%;
     margin-left: 20%;
-    padding: 15px;
+    padding: 100px 25px 100px 25px;
   }
   .about__container {
     background-position: center;
   }
 }
+.link {
+  font-weight: 700;
+}
+
 .nav__container {
   z-index: 99;
   box-sizing: border-box;
@@ -221,7 +225,6 @@ p {
   text-shadow: 3px 3px 5px #000;
 }
 .about__info {
-  height: 400px;
   box-sizing: border-box;
   color: #D2D2D2;
   background-color: #A53D3D;
@@ -230,7 +233,7 @@ p {
   border-style: solid;
   border-width: 5px;
   border-radius: 30px;
-  font-size: 26px;
+  font-size: 30px;
   box-shadow: 5px 5px 5px #000;
 }
 .about__resume {
@@ -242,7 +245,7 @@ p {
   font-weight: 600;
   border-style: none;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 40px;
   box-shadow: 5px 5px 5px #000;
   cursor: pointer;
 }
@@ -303,7 +306,7 @@ p {
   transition: transform 0.5s;
 }
 .portfolio__object__image:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 .portfolio__object__image__container {
   width: 98%;

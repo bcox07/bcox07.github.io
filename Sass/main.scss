@@ -9,6 +9,7 @@ html {
 }
 
 
+
 body {
     width: 100%;
     box-sizing: border-box;
@@ -66,9 +67,6 @@ p {
             margin-left: 5%;
             padding: 5%;
         }
-        &__container {
-            //background-position: left;
-        }
     }
     .footer {
         height: 200px;
@@ -120,6 +118,7 @@ p {
         &__info {
             width: 80%;
             margin-left: 10%;
+            padding: 60px 15px 60px 15px;
         }
     }
     .footer {
@@ -146,13 +145,6 @@ p {
         }
     }
 }
-
-/* Medium devices (landscape tablets, 768px and up) */
-//@media only screen and (min-width: 768px) {...}
-
-/* Large devices (laptops/desktops, 992px and up) */
-//@media only screen and (min-width: 992px) {...}
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .nav {
@@ -172,12 +164,16 @@ p {
         &__info {
             width: 60%;
             margin-left: 20%;
-            padding: 15px;
+            padding: 100px 25px 100px 25px;
         }
         &__container {
             background-position: center;
         }
     }   
+}
+
+.link {
+    font-weight: 700;
 }
 
 .nav {
@@ -257,7 +253,6 @@ p {
         text-shadow: 3px 3px 5px #000;
     }
     &__info {
-        height: 400px;
         box-sizing: border-box;
         color: #D2D2D2;
         background-color: $PRIMARY;
@@ -266,7 +261,7 @@ p {
         border-style: solid;
         border-width: 5px;
         border-radius: 30px;
-        font-size: 26px;
+        font-size: 30px;
         box-shadow: 5px 5px 5px #000;
     }
     &__resume {
@@ -278,7 +273,7 @@ p {
         font-weight: 600;
         border-style: none;
         border-radius: 5px;
-        margin-top: 20px;
+        margin-top: 40px;
         box-shadow: 5px 5px 5px #000;
         cursor: pointer;
     }
@@ -338,7 +333,7 @@ p {
             -moz-transition: transform 0.5s;
             transition: transform 0.5s;
             &:hover {
-                transform: scale(1.5);
+                transform: scale(1.1);
             }
             &__container {
                 width: 98%;
