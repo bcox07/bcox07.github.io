@@ -43,6 +43,8 @@ p {
     margin: 0;
 }
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .nav {
@@ -96,6 +98,8 @@ p {
     }
 }
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .nav {
@@ -139,6 +143,9 @@ p {
         }
     }
 }
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .nav {
@@ -163,6 +170,8 @@ p {
     }   
 }
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 .link {
     font-weight: 700;
 }
@@ -186,9 +195,6 @@ p {
         -webkit-transition: background-position 0.5s;
         -moz-transition: background-position 0.5s;
         transition: background-position 0.5s, color 0.3s;
-        padding-top: 27px;
-        padding-left: 10px;
-        padding-right: 10px;
         font-size: 24px;
         font-weight: 600;
         padding: 2% 140px 2% 0.5%;
@@ -215,25 +221,20 @@ p {
 }
 
 
-#contact {
-    margin-right: 0;
-}
-
 .about {
     color: $PRIMARY;
+    box-sizing: border-box;
     &__container {
         @extend .about;
         width: 100%;
         margin-top: 100vh;
         text-align: center;
-        box-sizing: border-box;
         box-shadow: inset 0 5px 10px #000;
         background-image: url("../images/emmy2.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
         position: relative;
-        
     }
     &__title {
         @extend .about;
@@ -243,6 +244,7 @@ p {
         text-shadow: 3px 3px 5px #000;
     }
     &__info {
+        @extend .about;
         box-sizing: border-box;
         color: #D2D2D2;
         background-color: $PRIMARY;
@@ -255,6 +257,7 @@ p {
         box-shadow: 5px 5px 5px #000;
     }
     &__resume {
+        @extend .about;
         height: 50px;
         width: 200px;
         background-color: $TERTIARY;
@@ -271,6 +274,7 @@ p {
 
 .portfolio {
     background-color: $TERTIARY;
+    box-sizing: border-box;
     &__container {
         @extend .portfolio;
         position: relative;
@@ -289,10 +293,10 @@ p {
         height: 430px;
     }
     &__object {
+        @extend .portfolio;
         width: 95%;
         height: 96%;
         background-color: #D2D2D2;
-        box-sizing: border-box;
         margin-left: 2.5%;
         border-radius: 8px;
         border-style: solid;
@@ -336,9 +340,9 @@ p {
         }
         &__button {
             color: #D2D2D2;
+            background-color: $SECONDARY;
             width: 140px;
             height: 40px;
-            background-color: $SECONDARY;
             font-size: 15px;
             font-weight: 600;
             border-style: none;

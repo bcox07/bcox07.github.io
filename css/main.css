@@ -162,9 +162,6 @@ p {
   -webkit-transition: background-position 0.5s;
   -moz-transition: background-position 0.5s;
   transition: background-position 0.5s, color 0.3s;
-  padding-top: 27px;
-  padding-left: 10px;
-  padding-right: 10px;
   font-size: 24px;
   font-weight: 600;
   padding: 2% 140px 2% 0.5%;
@@ -189,18 +186,14 @@ p {
   margin-bottom: 10px;
 }
 
-#contact {
-  margin-right: 0;
-}
-
-.about, .about__title, .about__container {
+.about, .about__resume, .about__info, .about__title, .about__container {
   color: #A53D3D;
+  box-sizing: border-box;
 }
 .about__container {
   width: 100%;
   margin-top: 100vh;
   text-align: center;
-  box-sizing: border-box;
   box-shadow: inset 0 5px 10px #000;
   background-image: url("../images/emmy2.png");
   background-repeat: no-repeat;
@@ -240,8 +233,9 @@ p {
   cursor: pointer;
 }
 
-.portfolio, .portfolio__container {
+.portfolio, .portfolio__object, .portfolio__container {
   background-color: #6494AA;
+  box-sizing: border-box;
 }
 .portfolio__container {
   position: relative;
@@ -263,7 +257,6 @@ p {
   width: 95%;
   height: 96%;
   background-color: #D2D2D2;
-  box-sizing: border-box;
   margin-left: 2.5%;
   border-radius: 8px;
   border-style: solid;
@@ -308,9 +301,9 @@ p {
 }
 .portfolio__object__button {
   color: #D2D2D2;
+  background-color: #BF975E;
   width: 140px;
   height: 40px;
-  background-color: #BF975E;
   font-size: 15px;
   font-weight: 600;
   border-style: none;
