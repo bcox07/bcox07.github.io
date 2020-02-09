@@ -1,9 +1,13 @@
 <html data-scroll="1000">
-    <head>
-        <link rel="stylesheet" type="text/css" href="./css/main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/scripts.js"></script>
+</head>
+
+<body onscroll="getScrollPosition()">
+    <div class="nav" id="home">
         <div class="nav__container">
             <nav>
                 <ul>
@@ -15,72 +19,119 @@
                     </ul>
                 </ul>
             </nav>
-        </div>      
-        <div class="about__container" id="about">
-            <h1 class="about__title">About Me</h1>
-            <div class="about__info">My name is Brian Cox and I am a Software Developer that will graduate from Georgia Southern University in May. I have an interest in back-end development, but I also enjoy learning anything involved with software development. Make sure to check out some of my recent projects or contact me <u><a href="#portfolio" class="link">here!</a></u></div>
-            <button type="button" class="about__resume" onclick="window.open('./pages/Resume.pdf', '_blank');">Resume</a></button>
         </div>
-        <div class="portfolio__container" id="portfolio">
-            <h1 class="portfolio__title">Portfolio</h1>
-            <ul class="portfolio__object__container">
-                <li class="portfolio__card">
-                    <div class="portfolio__object">
-                        <div class="portfolio__object__image__container"></div>
-                        <div class="portfolio__object__title">Theseus</div>
-                        <div class="portfolio__object__info">
-                            Theseus is a Survival/Puzzle game based on the Greek Myth know as <em>Theseus and the Minotaur</em>.</em> It was designed using the Unity Game Engine paired with the C# programming language.
-                        </div>
-                        <button type="button" class="portfolio__object__button" onclick="window.open('https://github.com/GabePetkewich/Mino-Game', '_blank');">View on GitHub</a></button>
-                    </div>
-                </li>
-                <li class="portfolio__card">
-                    <div class="portfolio__object">
-                        <div class="portfolio__object__image__container" >
-                            <img src="images/updog.png" class="portfolio__object__image"> 
-                        </div>
-                        <div class="portfolio__object__title">Updog</div>
-                        <div class="portfolio__object__info">
-                            Updog is a community driven music web application where the users create and add songs with the idea of collaboration. This is created using Sass and Pug for the front-end, Node.js with REST API for the back-end, and <em>PostgreSQL</em> for the database.
-                        </div>
-                        <button type="button" class="portfolio__object__button" onclick="window.open('https://gitlab.com/hadley31/updog', '_blank');">View on GitLab</a></button>
-                    </div>
-                </li>
-                <li class="portfolio__card">
-                    <div class="portfolio__object">
-                        <div class="portfolio__object__image__container" >
-                            <img src="images/osmoe-thumb.png" class="portfolio__object__image">   
-                        </div>
-                        <div class="portfolio__object__title">Osmoe Sam</div>
-                        <div class="portfolio__object__info">
-                            Osmoe Sam is a motivational web application that provides stats for the user's pet to keep the user motivated. This is created using Sass and Pug for the front-end, Node.js for the back-end, and PostgreSQL for the database.
-                        </div>
-                        <button type="button" class="portfolio__object__button" onclick="window.open('https://gitlab.com/crspradlin/hci-final-project', '_blank');" target="_blank">View on GitLab</button>
-                    </div>
-                </li>
-                <li class="portfolio__card">
-                    <div class="portfolio__object">
-                        <div class="portfolio__object__image__container">
-                            <img src="images/emmy.png" class="portfolio__object__image">
-                            
-                        </div>
-                        <div class="portfolio__object__title">
-                            Student Emmy
-                        </div>
-                        <div class="portfolio__object__info">
-                            I was recently awarded a Student Emmy for my work in <em>Sports, Live Events - Georgia Southern Baseball</em>.
-                        </div>
-                        <button type="button" class="portfolio__object__button" onclick="window.open('https://news.georgiasouthern.edu/2019/06/21/georgia-southern-university-wins-2-professional-4-student-emmy-awards/?utm_campaign=EmmyAwards&utm_source=linkedin&utm_medium=Facebook&utm_content=1561497960', '_blank');">View Article</a></button>
-                    </div>
-                </li>
-            </ul>
+    </div>
+    <div style="height: 300%; width: 100%; position: absolute; margin-top: -100%;">
+        <div class="nav__sticky" id="stickyNav">
+            <a href="#home" class="nav__sticky__title">Brian Cox</a>
+            <a href="#about" class="nav__sticky__button">About</a>
+            <a href="#portfolio" class="nav__sticky__button">Portfolio</a>
+            <a href="#footer" class="nav__sticky__button">Contact</a>
         </div>
-        <footer class="footer" id="footer">
-            <div class="footer__container">
-                <a href="mailto: brian.cox07@gmail.com" class="footer__button__left">Email</a>
-                <a href="https://www.linkedin.com/in/brian-cox-3b18a5168/" class="footer__button__center" id="center_link" target="_blank">LinkedIn</a>
-                <a href="https://github.com/bcox07" class="footer__button__right" target="_blank">GitHub</a>
-            </div>
-        </footer>
-    </body>
+        <div class="nav__sticky__mobile__container" id="stickyNavMobile">
+            <a href="#home" class="nav__sticky__mobile__title">Home</a>
+            <a href="#about" class="nav__sticky__mobile__button">About</a>
+            <a href="#portfolio" class="nav__sticky__mobile__button">Portfolio</a>
+            <a href="#footer" class="nav__sticky__mobile__button">Contact</a>
+        </div>
+    </div>
+
+
+    <div class="about__container" id="about">
+
+        <h1 class="about__title">About Me</h1>
+        <div class="about__info">My name is Brian Cox and I am a Software Developer that will graduate from Georgia
+            Southern University in May. I have an interest in back-end development, but I also enjoy learning
+            anything
+            involved with software development. Make sure to check out some of my recent projects or contact me
+            <u><a href="#portfolio" class="link">here!</a></u></div>
+        <button type="button" class="about__resume"
+            onclick="window.open('./pages/Resume.pdf', '_blank');">Resume</a></button>
+
+    </div>
+
+    <div class="portfolio__container" id="portfolio">
+        <h1 class="portfolio__title">Portfolio</h1>
+        <ul class="portfolio__object__container">
+            <li class="portfolio__card">
+                <div class="portfolio__object">
+                    <div class="portfolio__object__image__container"></div>
+                    <div class="portfolio__object__title">Theseus</div>
+                    <div class="portfolio__object__info">
+                        Theseus is a Survival/Puzzle game based on the Greek Myth know as <em>Theseus and the
+                            Minotaur</em>.</em> It was designed using the Unity Game Engine paired with the C#
+                        programming language.
+                    </div>
+                    <button type="button" class="portfolio__object__button"
+                        onclick="window.open('https://github.com/GabePetkewich/Mino-Game', '_blank');">View on
+                        GitHub</a></button>
+                </div>
+            </li>
+            <li class="portfolio__card">
+                <div class="portfolio__object">
+                    <div class="portfolio__object__image__container">
+                        <img src="images/updog.png" class="portfolio__object__image">
+                    </div>
+                    <div class="portfolio__object__title">Updog</div>
+                    <div class="portfolio__object__info">
+                        Updog is a community driven music web application where the users create and add songs with
+                        the
+                        idea of collaboration. This is created using Sass and Pug for the front-end, Node.js with
+                        REST
+                        API for the back-end, and <em>PostgreSQL</em> for the database.
+                    </div>
+                    <button type="button" class="portfolio__object__button"
+                        onclick="window.open('https://gitlab.com/hadley31/updog', '_blank');">View on
+                        GitLab</a></button>
+                </div>
+            </li>
+            <li class="portfolio__card">
+                <div class="portfolio__object">
+                    <div class="portfolio__object__image__container">
+                        <img src="images/osmoe-thumb.png" class="portfolio__object__image">
+                    </div>
+                    <div class="portfolio__object__title">Osmoe Sam</div>
+                    <div class="portfolio__object__info">
+                        Osmoe Sam is a motivational web application that provides stats for the user's pet to keep
+                        the
+                        user motivated. This is created using Sass and Pug for the front-end, Node.js for the
+                        back-end,
+                        and PostgreSQL for the database.
+                    </div>
+                    <button type="button" class="portfolio__object__button"
+                        onclick="window.open('https://gitlab.com/crspradlin/hci-final-project', '_blank');"
+                        target="_blank">View on GitLab</button>
+                </div>
+            </li>
+            <li class="portfolio__card">
+                <div class="portfolio__object">
+                    <div class="portfolio__object__image__container">
+                        <img src="images/emmy.png" class="portfolio__object__image">
+
+                    </div>
+                    <div class="portfolio__object__title">
+                        Student Emmy
+                    </div>
+                    <div class="portfolio__object__info">
+                        I was recently awarded a Student Emmy for my work in <em>Sports, Live Events - Georgia
+                            Southern
+                            Baseball</em>.
+                    </div>
+                    <button type="button" class="portfolio__object__button"
+                        onclick="window.open('https://news.georgiasouthern.edu/2019/06/21/georgia-southern-university-wins-2-professional-4-student-emmy-awards/?utm_campaign=EmmyAwards&utm_source=linkedin&utm_medium=Facebook&utm_content=1561497960', '_blank');">View
+                        Article</a></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer__container">
+            <a href="mailto: brian.cox07@gmail.com" class="footer__button__left">Email</a>
+            <a href="https://www.linkedin.com/in/brian-cox-3b18a5168/" class="footer__button__center"
+                id="center_link">LinkedIn</a>
+            <a href="https://github.com/bcox07" class="footer__button__right">GitHub</a>
+        </div>
+    </footer>
+</body>
+
 </html>
