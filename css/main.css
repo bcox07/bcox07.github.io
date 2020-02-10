@@ -167,6 +167,12 @@ p {
     font-weight: 600;
     margin: 20px 40px 0 0;
   }
+  .nav__sticky__container {
+    height: 300%;
+    width: 100%;
+    position: absolute;
+    margin-top: -100%;
+  }
 
   .portfolio__card {
     width: 50%;
@@ -337,12 +343,13 @@ p {
   text-shadow: 3px 3px 5px #000;
 }
 .portfolio__card {
-  height: 430px;
+  height: 440px;
 }
 .portfolio__object {
   width: 95%;
   height: 96%;
   background-color: #D2D2D2;
+  position: relative;
   margin-left: 2.5%;
   border-radius: 8px;
   border-style: solid;
@@ -377,17 +384,25 @@ p {
   transform: scale(1.1);
 }
 .portfolio__object__image__container {
-  width: 98%;
+  width: 99%;
   height: 40%;
-  margin-top: 5px;
-  margin-left: 5px;
+  margin-top: 0.5%;
+  margin-left: 0.5%;
   text-align: center;
   overflow: hidden;
   display: block;
 }
+.portfolio__object__extender {
+  color: #A53D3D;
+  font-weight: 600;
+  position: relative;
+  bottom: 5px;
+  cursor: pointer;
+}
 .portfolio__object__button {
   color: #D2D2D2;
   background-color: #BF975E;
+  position: absolute;
   width: 140px;
   height: 40px;
   font-size: 15px;
@@ -395,6 +410,8 @@ p {
   border-style: none;
   border-radius: 5px;
   margin-top: 10px;
+  bottom: 10px;
+  left: 25%;
   cursor: pointer;
 }
 .portfolio__object__info {

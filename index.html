@@ -6,7 +6,7 @@
     <script src="js/scripts.js"></script>
 </head>
 
-<body onscroll="getScrollPosition()">
+<body onscroll="getScrollPosition()" onload="load()">
     <div class="nav" id="home">
         <div class="nav__container">
             <nav>
@@ -21,7 +21,7 @@
             </nav>
         </div>
     </div>
-    <div style="height: 300%; width: 100%; position: absolute; margin-top: -100%;">
+    <div class='nav__sticky__container'>
         <div class="nav__sticky" id="stickyNav">
             <a href="#home" class="nav__sticky__title">Brian Cox</a>
             <a href="#about" class="nav__sticky__button">About</a>
@@ -52,22 +52,28 @@
 
     <div class="portfolio__container" id="portfolio">
         <h1 class="portfolio__title">Portfolio</h1>
-        <ul class="portfolio__object__container">
-            <li class="portfolio__card">
-                <div class="portfolio__object">
-                    <div class="portfolio__object__image__container"></div>
+        <ul class="portfolio__object__container" id="portfolio_object_container">
+            <li class="portfolio__card collapsed" id='theseus'>
+                <div class="portfolio__object" >
+                    <div class="portfolio__object__image__container">
+                        <img src="images/theseus.png" class="portfolio__object__image">
+                    </div>
                     <div class="portfolio__object__title">Theseus</div>
                     <div class="portfolio__object__info">
                         Theseus is a Survival/Puzzle game based on the Greek Myth know as <em>Theseus and the
-                            Minotaur</em>.</em> It was designed using the Unity Game Engine paired with the C#
+                        Minotaur</em>. It was designed using the Unity Game Engine paired with the C#
                         programming language.
+                    </div>
+                    <div class='portfolio__object__extender' id='theseusBtn'>
+                        More Info
                     </div>
                     <button type="button" class="portfolio__object__button"
                         onclick="window.open('https://github.com/GabePetkewich/Mino-Game', '_blank');">View on
-                        GitHub</a></button>
+                        GitHub
+                    </button>
                 </div>
             </li>
-            <li class="portfolio__card">
+            <li class="portfolio__card collapsed" id='updog'>
                 <div class="portfolio__object">
                     <div class="portfolio__object__image__container">
                         <img src="images/updog.png" class="portfolio__object__image">
@@ -80,12 +86,15 @@
                         REST
                         API for the back-end, and <em>PostgreSQL</em> for the database.
                     </div>
+                    <div class='portfolio__object__extender' id='updogBtn'>
+                        More Info
+                    </div>
                     <button type="button" class="portfolio__object__button"
                         onclick="window.open('https://gitlab.com/hadley31/updog', '_blank');">View on
-                        GitLab</a></button>
+                        GitLab</button>
                 </div>
             </li>
-            <li class="portfolio__card">
+            <li class="portfolio__card collapsed" id='osmoe'>
                 <div class="portfolio__object">
                     <div class="portfolio__object__image__container">
                         <img src="images/osmoe-thumb.png" class="portfolio__object__image">
@@ -98,12 +107,15 @@
                         back-end,
                         and PostgreSQL for the database.
                     </div>
+                    <div class='portfolio__object__extender' id='osmoeBtn'>
+                        More Info
+                    </div>
                     <button type="button" class="portfolio__object__button"
                         onclick="window.open('https://gitlab.com/crspradlin/hci-final-project', '_blank');"
                         target="_blank">View on GitLab</button>
                 </div>
             </li>
-            <li class="portfolio__card">
+            <li class="portfolio__card collapsed" id='emmy'>
                 <div class="portfolio__object">
                     <div class="portfolio__object__image__container">
                         <img src="images/emmy.png" class="portfolio__object__image">
@@ -116,6 +128,9 @@
                         I was recently awarded a Student Emmy for my work in <em>Sports, Live Events - Georgia
                             Southern
                             Baseball</em>.
+                    </div>
+                    <div class='portfolio__object__extender' id='emmyBtn'>
+                        More Info
                     </div>
                     <button type="button" class="portfolio__object__button"
                         onclick="window.open('https://news.georgiasouthern.edu/2019/06/21/georgia-southern-university-wins-2-professional-4-student-emmy-awards/?utm_campaign=EmmyAwards&utm_source=linkedin&utm_medium=Facebook&utm_content=1561497960', '_blank');">View
