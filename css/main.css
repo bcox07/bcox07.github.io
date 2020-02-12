@@ -184,6 +184,15 @@ p {
     padding: 60px 15px 60px 15px;
   }
 
+  .extended {
+    min-height: 1000px;
+  }
+
+  .collapsed {
+    min-height: 450px;
+    margin-bottom: 30px;
+  }
+
   .footer {
     height: 100px;
   }
@@ -223,6 +232,15 @@ p {
   }
   .about__container {
     background-position: center;
+  }
+
+  .extended {
+    min-height: 1000px;
+  }
+
+  .collapsed {
+    min-height: 450px;
+    margin-bottom: 30px;
   }
 }
 .link {
@@ -325,7 +343,7 @@ p {
   cursor: pointer;
 }
 
-.portfolio, .portfolio__object, .portfolio__container {
+.portfolio, .portfolio__object, .portfolio__card, .portfolio__container {
   background-color: #6494AA;
   box-sizing: border-box;
 }
@@ -342,12 +360,9 @@ p {
   font-size: 45px;
   text-shadow: 3px 3px 5px #000;
 }
-.portfolio__card {
-  height: 440px;
-}
 .portfolio__object {
   width: 95%;
-  height: 96%;
+  min-height: 96%;
   background-color: #D2D2D2;
   position: relative;
   margin-left: 2.5%;
@@ -355,6 +370,7 @@ p {
   border-style: solid;
   border-color: #A53D3D;
   border-width: 5px;
+  padding-bottom: 7px;
   box-shadow: 5px 5px 10px #000;
 }
 .portfolio__object__container {
@@ -371,26 +387,17 @@ p {
   font-weight: 600;
   margin: 20px 0 10px 0;
 }
-.portfolio__object__image {
-  width: 100%;
-  object-fit: contain;
-  border-radius: 2px;
-  position: relative;
-  -webkit-transition: transform 0.5s;
-  -moz-transition: transform 0.5s;
-  transition: transform 0.5s;
-}
-.portfolio__object__image:hover {
-  transform: scale(1.1);
-}
 .portfolio__object__image__container {
   width: 99%;
-  height: 40%;
+  min-height: 40%;
   margin-top: 0.5%;
   margin-left: 0.5%;
+  border-radius: 3px;
   text-align: center;
   overflow: hidden;
-  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: top;
 }
 .portfolio__object__extender {
   color: #A53D3D;
@@ -402,7 +409,6 @@ p {
 .portfolio__object__button {
   color: #D2D2D2;
   background-color: #BF975E;
-  position: absolute;
   width: 140px;
   height: 40px;
   font-size: 15px;
@@ -410,8 +416,6 @@ p {
   border-style: none;
   border-radius: 5px;
   margin-top: 10px;
-  bottom: 10px;
-  left: 25%;
   cursor: pointer;
 }
 .portfolio__object__info {
@@ -419,6 +423,38 @@ p {
   overflow: hidden;
   padding: 0 5% 0 5%;
   top: 200px;
+}
+.portfolio__object__info__divider {
+  visibility: hidden;
+  width: 70%;
+  height: 3px;
+  margin-left: 15%;
+  background-color: #BF975E;
+}
+.portfolio__object__roles {
+  visibility: hidden;
+  font-size: 24px;
+  height: 0;
+}
+.portfolio__object__roles__header {
+  color: #A53D3D;
+  font-size: 24px;
+  font-weight: 600;
+  height: 0;
+  visibility: hidden;
+}
+.portfolio__object__thumbnail {
+  position: relative;
+  float: left;
+  width: 25%;
+}
+.portfolio__object__thumbnail__container {
+  width: 99%;
+  height: 0;
+  min-height: 0;
+  margin-left: 0.5%;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .footer {

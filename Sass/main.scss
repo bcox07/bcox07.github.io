@@ -205,6 +205,13 @@ p {
             padding: 60px 15px 60px 15px;
         }
     }
+    .extended {
+        min-height: 1000px;
+    } 
+    .collapsed {
+        min-height: 450px;
+        margin-bottom: 30px;
+    } 
     .footer {
         height: 100px;
         &__container {
@@ -253,7 +260,14 @@ p {
         &__container {
             background-position: center;
         }
-    }   
+    }  
+    .extended {
+        min-height: 1000px;
+    } 
+    .collapsed {
+        min-height: 450px;
+        margin-bottom: 30px;
+    } 
 }
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -381,12 +395,12 @@ p {
         text-shadow: 3px 3px 5px #000;
     }
     &__card {
-        height: 440px;
+        @extend .portfolio;
     }
     &__object {
         @extend .portfolio;
         width: 95%;
-        height: 96%;
+        min-height: 96%;
         background-color: #D2D2D2;
         position: relative;
         margin-left: 2.5%;
@@ -394,6 +408,7 @@ p {
         border-style: solid;
         border-color: $PRIMARY;
         border-width: 5px;
+        padding-bottom: 7px;
         box-shadow: 5px 5px 10px #000;
         &__container {
             width: 98%;
@@ -410,24 +425,17 @@ p {
             margin: 20px 0 10px 0;
         }
         &__image {
-            width: 100%;
-            object-fit: contain;
-            border-radius: 2px;
-            position: relative;
-            -webkit-transition: transform 0.5s;
-            -moz-transition: transform 0.5s;
-            transition: transform 0.5s;
-            &:hover {
-                transform: scale(1.1);
-            }
             &__container {
                 width: 99%;
-                height: 40%;
+                min-height: 40%;
                 margin-top: 0.5%;
                 margin-left: 0.5%;
+                border-radius: 3px;
                 text-align: center;
-                overflow: hidden;
-                display: block;   
+                overflow: hidden;  
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position-y: top;
             }
         }
         &__extender {
@@ -440,7 +448,6 @@ p {
         &__button {
             color: #D2D2D2;
             background-color: $SECONDARY;
-            position: absolute;
             width: 140px;
             height: 40px;
             font-size: 15px;
@@ -448,8 +455,6 @@ p {
             border-style: none;
             border-radius: 5px;
             margin-top: 10px;
-            bottom: 10px;
-            left: 25%;
             cursor: pointer;
         }
         &__info {
@@ -457,9 +462,42 @@ p {
             overflow: hidden;
             padding: 0 5% 0 5%;
             top: 200px;
+            &__divider {
+                visibility: hidden;
+                width: 70%;
+                height: 3px;
+                margin-left: 15%;
+                background-color: $SECONDARY;
+            }
+        }
+        &__roles {
+            visibility: hidden;
+            font-size: 24px;
+            height: 0;
+            &__header {
+                color: $PRIMARY;
+                font-size: 24px;
+                font-weight: 600;
+                height: 0;
+                visibility: hidden;
+            }
+        }
+        &__thumbnail{
+            position: relative;
+            float: left;
+            width: 25%;
+            &__container {
+                width: 99%;
+                height: 0;
+                min-height: 0;
+                margin-left: 0.5%;
+                overflow: hidden;
+                visibility: hidden;
+            }
         }
     }
 }
+
 .footer {
     width: 100%;
     box-sizing: border-box;
