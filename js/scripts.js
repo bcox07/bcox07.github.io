@@ -79,6 +79,8 @@ function extendPortfolioCard(card, btn) {
     card.classList.add('extended');
     card.classList.remove('collapsed');
 
+    unhideElements(card);
+    /*
     var extendedCardX;
     var extendedCardY;
     let otherCards = document.getElementsByClassName('portfolio__card');
@@ -141,6 +143,7 @@ function extendPortfolioCard(card, btn) {
             collapsedCards[i].style.width = "33.3%";
         }
     }
+    */
 }
 
 
@@ -149,7 +152,9 @@ function collapsePortfolioCard(card, btn) {
     btn.innerHTML = 'More Info';
     card.classList.add('collapsed');
     card.classList.remove('extended');
+    hideElements(card);
 
+    /*
     var extendedCardX;
     var extendedCardY;
 
@@ -221,67 +226,27 @@ function collapsePortfolioCard(card, btn) {
             }
         }
     }
+    */
 }
 
 function unhideElements(card) {
+    let imageContainer = card.childNodes[1];
 
-    let cardInfo = card.childNodes[1].childNodes[5];
-    let cardRoleHeader = card.childNodes[1].childNodes[9];
-    let cardRole = card.childNodes[1].childNodes[11];
-    let cardDividers = [card.childNodes[1].childNodes[7], card.childNodes[1].childNodes[13]];
-    let thumbContainer = card.childNodes[1].childNodes[15];
+    let thumbContainer = card.childNodes[15];
 
-    cardInfo.style.fontSize = '24px';
-    cardInfo.style.height = 'auto';
-    cardInfo.style.marginBottom = '20px';
-
-    for (const i in cardDividers){
-        cardDividers[i].style.visibility = 'visible';
-    }
-
-    cardRoleHeader.style.visibility = 'visible';
-    cardRoleHeader.style.height = 'auto';
-    cardRoleHeader.style.marginTop = '20px';
-    cardRoleHeader.style.marginBottom = '10px';
-
-    cardRole.style.visibility = 'visible';
-    cardRole.style.height = 'auto';
-    cardRole.style.marginBottom = '20px';
-
-    thumbContainer.style.visibility = 'visible';
-    thumbContainer.style.minHeight = '150px';
-    thumbContainer.style.marginTop = '20px';
-    thumbContainer.style.marginBottom = '20px';
+    let imageString = 'url("./images/' + card.id + '.png")';
+    console.log(imageString);
+    imageContainer.style.height = imageContainer.clientWidth * 0.182 + 'px';
+    imageContainer.style.backgroundImage = imageString;
 }
 
 function hideElements(card) {
+    let imageContainer = card.childNodes[1];
 
-    let cardInfo = card.childNodes[1].childNodes[5];
-    let cardRoleHeader = card.childNodes[1].childNodes[9];
-    let cardRole = card.childNodes[1].childNodes[11];
-    let cardDividers = [card.childNodes[1].childNodes[7], card.childNodes[1].childNodes[13]];
-    let thumbContainer = card.childNodes[1].childNodes[15];
+    let thumbContainer = card.childNodes[15];
 
-    cardInfo.style.fontSize = 'initial';
-    cardInfo.style.height = '28%';
-    cardInfo.style.marginBottom = 'initial';
+    let imageString = 'url("./images/' + card.id + '-thumb.png")';
 
-    for (const i in cardDividers){
-        cardDividers[i].style.visibility = 'hidden';
-    }
-
-    cardRoleHeader.style.visibility = 'hidden';
-    cardRoleHeader.style.height = '0';
-    cardRoleHeader.style.marginTop = 'initial';
-    cardRoleHeader.style.marginBottom = 'initial';
-
-    cardRole.style.visibility = 'hidden';
-    cardRole.style.height = '0';
-    cardRole.style.marginBottom = '0';
-
-    thumbContainer.style.visibility = 'hidden';
-    thumbContainer.style.minHeight = '0';
-    thumbContainer.style.height = '0';
-    thumbContainer.style.marginTop = '0';
-    thumbContainer.style.marginBottom = '0';
+    imageContainer.style.height = '150px';
+    imageContainer.style.backgroundImage = imageString;
 }

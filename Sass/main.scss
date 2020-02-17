@@ -195,7 +195,7 @@ p {
     }
     .portfolio {
         &__card {
-            width: 50%;
+            width: 40%;
         }
     }
     .about {
@@ -206,11 +206,14 @@ p {
         }
     }
     .extended {
-        min-height: 1000px;
+        //min-height: 1000px;
+        flex-grow: 6;
     } 
     .collapsed {
         min-height: 450px;
         margin-bottom: 30px;
+        flex-grow: 0;
+        order: 2;
     } 
     .footer {
         height: 100px;
@@ -248,7 +251,15 @@ p {
     }
     .portfolio {
         &__card {
-            width: 25%;
+            width: 1%;
+        }
+        &__object {
+            width: 1%;
+            &__image {
+                &__container{
+                    height: 150px;
+                }
+            }
         }
     }
     .about {
@@ -262,11 +273,15 @@ p {
         }
     }  
     .extended {
-        min-height: 1000px;
+        margin-bottom: 30px;
+        min-height: 900px;
+        align-content: flex-end;
+        width: 100%;
     } 
     .collapsed {
         min-height: 450px;
         margin-bottom: 30px;
+        flex-grow: 1;
     } 
 }
 
@@ -398,24 +413,27 @@ p {
         @extend .portfolio;
     }
     &__object {
-        @extend .portfolio;
-        width: 95%;
-        min-height: 96%;
         background-color: #D2D2D2;
         position: relative;
-        margin-left: 2.5%;
+        margin: 0 0.5% 20px 0.5%;
         border-radius: 8px;
         border-style: solid;
         border-color: $PRIMARY;
         border-width: 5px;
         padding-bottom: 7px;
         box-shadow: 5px 5px 10px #000;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        align-content: space-between;
         &__container {
             width: 98%;
             box-sizing: border-box;
             margin: 60px 0 100px 1%;
             display: flex;
-            flex-wrap: wrap;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            align-items: stretch;
             padding: 0;
         }
         &__title {
@@ -423,13 +441,13 @@ p {
             font-size: 28px;
             font-weight: 600;
             margin: 20px 0 10px 0;
+            flex-basis: 100%;
+            flex-grow: 1;
         }
         &__image {
             &__container {
                 width: 99%;
-                min-height: 40%;
                 margin-top: 0.5%;
-                margin-left: 0.5%;
                 border-radius: 3px;
                 text-align: center;
                 overflow: hidden;  
@@ -444,6 +462,8 @@ p {
             position: relative;
             bottom: 5px;
             cursor: pointer;
+            flex-grow: 1;
+            width: 100%;
         }
         &__button {
             color: #D2D2D2;
@@ -468,6 +488,7 @@ p {
                 height: 3px;
                 margin-left: 15%;
                 background-color: $SECONDARY;
+
             }
         }
         &__roles {
@@ -483,14 +504,20 @@ p {
             }
         }
         &__thumbnail{
+            box-sizing: border-box;
             position: relative;
             float: left;
-            width: 25%;
+            background-size: cover;
+            width: 24.5%;
+            height: 100%;
+            margin: 0 0.25% 0 0.25%;
             &__container {
+                box-sizing: border-box;
                 width: 99%;
                 height: 0;
                 min-height: 0;
                 margin-left: 0.5%;
+                background-color: $SECONDARY;
                 overflow: hidden;
                 visibility: hidden;
             }
