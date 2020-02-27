@@ -41,7 +41,7 @@ p {
   }
 
   .nav__container {
-    width: 90%;
+    display: none;
   }
   .nav__title {
     font-size: 60px;
@@ -98,6 +98,20 @@ p {
     font-size: 20px;
     font-weight: 600;
     margin: 20px 40px 0 0;
+  }
+  .nav__mobile__container {
+    display: block;
+    height: 100%;
+  }
+  .nav__mobile__title {
+    font-size: 50px;
+    font-weight: 600;
+    padding-top: 300px;
+    color: #D2D2D2;
+  }
+  .nav__mobile__menu__btn {
+    height: 50px;
+    padding-top: 400px;
   }
 
   .portfolio__container {
@@ -196,6 +210,9 @@ p {
     width: 100%;
     position: absolute;
     margin-top: -100%;
+  }
+  .nav__mobile__container {
+    display: none;
   }
 
   .portfolio, .portfolio__card, .portfolio__container {
