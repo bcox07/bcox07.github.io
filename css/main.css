@@ -36,6 +36,10 @@ p {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  nav {
+    margin-top: 230px;
+  }
+
   .nav__container {
     width: 90%;
   }
@@ -60,6 +64,9 @@ p {
     box-shadow: 0 5px 10px black;
     z-index: 50;
     display: none;
+  }
+  .nav__button {
+    width: 150px;
   }
   .nav__sticky {
     box-sizing: border-box;
@@ -93,8 +100,14 @@ p {
     margin: 20px 40px 0 0;
   }
 
-  .portfolio__card {
-    width: 100%;
+  .portfolio__container {
+    padding: 50px 0 0 0;
+  }
+  .portfolio__object {
+    transition: min-height 0.5s;
+  }
+  .portfolio__object__image__container {
+    height: 150px;
   }
 
   .about__info {
@@ -130,11 +143,22 @@ p {
     height: 33.3%;
     padding-top: 22px;
   }
+
+  .extended {
+    min-height: 1000px;
+  }
+
+  .collapsed {
+    min-height: 450px;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .nav__title {
     font-size: 60px;
+  }
+  .nav__button {
+    width: 205px;
   }
   .nav__sticky {
     box-sizing: border-box;
@@ -174,8 +198,14 @@ p {
     margin-top: -100%;
   }
 
+  .portfolio, .portfolio__card, .portfolio__container {
+    padding: 50px 0 0 0;
+  }
   .portfolio__card {
     width: 40%;
+  }
+  .portfolio__object__image__container {
+    height: 150px;
   }
 
   .about__info {
@@ -223,9 +253,6 @@ p {
     font-size: 70px;
   }
 
-  .portfolio__card {
-    width: 1%;
-  }
   .portfolio__object {
     width: 1%;
   }
@@ -277,7 +304,6 @@ p {
 }
 .nav__button {
   color: #D2D2D2;
-  width: 205px;
   background-size: 200% 100%;
   background-image: linear-gradient(to right, #A53D3D 50%, #D2D2D2 50%);
   -webkit-transition: background-position 0.5s;
@@ -364,7 +390,6 @@ p {
   width: 100vw;
   box-shadow: 0 -5px 10px #000;
   text-align: center;
-  padding: 50px 0 50px 0;
   list-style-type: none;
 }
 .portfolio__title {
@@ -486,7 +511,7 @@ p {
   box-sizing: border-box;
   background-color: #202020;
   bottom: 0;
-  position: absolute;
+  position: relative;
   text-align: center;
 }
 .footer__container {
