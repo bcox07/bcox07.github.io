@@ -51,9 +51,6 @@ function getScrollPosition() {
     if (pos > window.innerHeight + 40 && window.innerWidth > 600) {
         navbar.style.display = "block";
     }
-    else if (pos > window.innerHeight + 40) {
-        navbarMobile.style.display = "block";
-    }
     else if (window.innerWidth > 600){
         navbar.style.display = "none";
     }
@@ -73,8 +70,21 @@ function adjustPortfolioCard(card, btn) {
 
 function extendPortfolioCard(card, btn) {
 
+
+    let title = card.childNodes[3];
+    let info = card.childNodes[5];
+
+    for(let i=0; i<4; i++){
+        let url = 'url(./images/thumbnails/' + card.id + '-thumb-' + (i+1);
+        let thumb = document.createElement("div");
+        thumb.style.backgroundImage = url;
+        info.insertAdjacentElement('afterend', thumb);
+    }
+
     btn.innerHTML = 'Less Info';
     card.classList.add('extended');
+    title.style.marginTop = '-40px';
+    info.style.marginTop = '-50px';
     card.classList.remove('collapsed');
 
     unhideElements(card);

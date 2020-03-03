@@ -224,6 +224,10 @@ p {
   .portfolio__object__image__container {
     height: 150px;
   }
+  .portfolio__object__title {
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
 
   .about__info {
     width: 80%;
@@ -444,8 +448,6 @@ p {
   font-size: 28px;
   font-weight: 600;
   margin: 20px 0 10px 0;
-  flex-basis: 100%;
-  flex-grow: 1;
 }
 .portfolio__object__image__container {
   width: 99%;
