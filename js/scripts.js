@@ -78,6 +78,8 @@ function extendPortfolioCard(card, btn) {
         let url = 'url(./images/thumbnails/' + card.id + '-thumb-' + (i+1);
         let thumb = document.createElement("div");
         thumb.style.backgroundImage = url;
+        thumb.style.width = '100%';
+        thumb.style.height = '100px';
         info.insertAdjacentElement('afterend', thumb);
     }
 
