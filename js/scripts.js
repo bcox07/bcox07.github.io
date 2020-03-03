@@ -28,19 +28,12 @@ function load() {
     navStickyContainer = document.getElementsByClassName('nav__sticky__container')[0];
 
 
-
-
     theseusExtendBtn.addEventListener("click", function () { adjustPortfolioCard(theseus, theseusExtendBtn) }, true);
     updogExtendBtn.addEventListener("click", function () { adjustPortfolioCard(updog, updogExtendBtn) }, true);
     osmoeExtendBtn.addEventListener("click", function () { adjustPortfolioCard(osmoe, osmoeExtendBtn) }, true);
     emmyExtendBtn.addEventListener("click", function () { adjustPortfolioCard(emmy, emmyExtendBtn) }, true);
 
 }
-
-
-
-
-
 
 
 
@@ -74,19 +67,14 @@ function extendPortfolioCard(card, btn) {
     let title = card.childNodes[3];
     let info = card.childNodes[5];
 
-    for(let i=0; i<4; i++){
-        let url = 'url(./images/thumbnails/' + card.id + '-thumb-' + (i+1);
-        let thumb = document.createElement("div");
-        thumb.style.backgroundImage = url;
-        thumb.style.width = '100%';
-        thumb.style.height = '100px';
-        info.insertAdjacentElement('afterend', thumb);
-    }
+    info.style.height = 'inherit';
+    info.style.marginBottom = '20px';
+
+    $(card.id).find('hidden');
 
     btn.innerHTML = 'Less Info';
     card.classList.add('extended');
-    title.style.marginTop = '-40px';
-    info.style.marginTop = '-50px';
+    card.classList.add('mobile');
     card.classList.remove('collapsed');
 
     unhideElements(card);
@@ -94,6 +82,14 @@ function extendPortfolioCard(card, btn) {
 
 
 function collapsePortfolioCard(card, btn) {
+
+    for(let i=0; i<4; i++){
+        let thumbnail = document.getElementById(i);
+        console.log(thumbnail);
+        thumbnail.remove();
+        
+    }
+
 
     btn.innerHTML = 'More Info';
     card.classList.add('collapsed');

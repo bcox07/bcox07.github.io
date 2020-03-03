@@ -178,10 +178,14 @@ p {
         }
     }
     .extended {
-        min-height: 1000px;
+        min-height: 1200px;
     }
     .collapsed {
         min-height: 450px;
+    }
+    .hidden {
+        height: 0;
+        width: 0;
     }
 }
 
