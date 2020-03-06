@@ -63,14 +63,24 @@ function adjustPortfolioCard(card, btn) {
 
 function extendPortfolioCard(card, btn) {
 
-
+    console.log(card.id);
     let title = card.childNodes[3];
     let info = card.childNodes[5];
 
     info.style.height = 'inherit';
     info.style.marginBottom = '20px';
 
-    $(card.id).find('hidden');
+    let thumbArray = [];
+    
+    let thumbElement = '#' + card.id + ' .thumbnail';
+
+    for (let i=0; i<4; i++){
+        thumbArray.push($(thumbElement)[i]);
+    }
+
+    for (let i=0; i<4; i++){
+        thumbArray[i].classList.remove('hidden');
+    }
 
     btn.innerHTML = 'Less Info';
     card.classList.add('extended');
@@ -83,13 +93,17 @@ function extendPortfolioCard(card, btn) {
 
 function collapsePortfolioCard(card, btn) {
 
-    for(let i=0; i<4; i++){
-        let thumbnail = document.getElementById(i);
-        console.log(thumbnail);
-        thumbnail.remove();
-        
+    let thumbArray = [];
+
+    let thumbElement = '#' + card.id + ' .thumbnail';
+
+    for (let i=0; i<4; i++){
+        thumbArray.push($(thumbElement)[i]);
     }
 
+    for (let i=0; i<4; i++){
+        thumbArray[i].classList.add('hidden');
+    }
 
     btn.innerHTML = 'More Info';
     card.classList.add('collapsed');
@@ -103,7 +117,6 @@ function unhideElements(card) {
     let thumbContainer = card.childNodes[15];
 
     let imageString = 'url("./images/' + card.id + '.png")';
-    console.log(imageString);
     imageContainer.style.height = imageContainer.clientWidth * 0.182 + 'px';
     imageContainer.style.backgroundImage = imageString;
 }

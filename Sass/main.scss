@@ -183,9 +183,17 @@ p {
     .collapsed {
         min-height: 450px;
     }
+    .thumbnail {
+        min-height: 54vw;
+        width: 98%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        transition: min-height 0.7s;
+    }
     .hidden {
-        height: 0;
+        min-height: 0;
         width: 0;
+        background-size: contain;
     }
 }
 
